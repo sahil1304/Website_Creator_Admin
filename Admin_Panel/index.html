@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <style>
+  
+  img{ height: 200px; width: 200px; border: 2px solid black;}
+
+/*Textbox CSS*/
+input[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+/*Division CSS*/
+
+
+
+#shadow {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 10px 15px #888888;
+  
+}
+
+
+/**/
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+/*
+.fonts {
+  font-family: 'Josefin Slab', serif;
+}
+*/
+
+body {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  background: #ececec;
+  overflow-y: scroll;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #00AE68;
+}
+
+.clear {
+  clear: both;
+}
+
+.pageTitle {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #00AE68;
+}
+
+.pageSubTitle {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
+}
+
+.articleTitle {
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.container {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    #CCC;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen {
+  background: #00AE68;
+}
+
+.btnLightBlue {
+  background: #5DC8CD;
+}
+
+.btnOrange {
+  background: #FFAA40;
+}
+
+.btnPurple {
+  background: #A74982;
+}
+
+/* FADE */
+.btnFade.btnBlueGreen:hover {
+  background: #21825B;
+}
+
+.btnFade.btnLightBlue:hover {
+  background: #01939A;
+}
+
+.btnFade.btnOrange:hover {
+  background: #FF8E00;
+}
+
+.btnFade.btnPurple:hover {
+  background: #6D184B;
+}
+
+/* 3D */
+.btnBlueGreen.btnPush {
+  box-shadow: 0px 5px 0px 0px #007144;
+}
+
+.btnLightBlue.btnPush {
+  box-shadow: 0px 5px 0px 0px #1E8185;
+}
+
+.btnOrange.btnPush {
+  box-shadow: 0px 5px 0px 0px #A66615;
+}
+
+.btnPurple.btnPush {
+  box-shadow: 0px 5px 0px 0px #6D184B;
+}
+
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #007144;
+}
+
+.btnLightBlue.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #1E8185;
+}
+
+.btnOrange.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+.btnPurple.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #6D184B;
+}
+
+/* BORDER */
+.btnBlueGreen.btnBorder {
+  box-shadow: 0px 0px 0px 0px #21825B;
+}
+
+.btnBlueGreen.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #21825B;
+}
+
+.btnLightBlue.btnBorder {
+  box-shadow: 0px 0px 0px 0px #01939A;
+}
+
+.btnLightBlue.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #01939A;
+}
+
+.btnOrange.btnBorder {
+  box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+.btnOrange.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #A66615;
+}
+
+.btnPurple.btnBorder {
+  box-shadow: 0px 0px 0px 0px #6D184B;
+}
+
+.btnPurple.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #6D184B;
+}
+
+/* FLOAT */
+.btnFloat {
+  background: none;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btnFloat:before {
+  content: 'Float';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen.btnFloat:before {
+  background: #00AE68;
+}
+
+.btnLightBlue.btnFloat:before {
+  background: #5DC8CD;
+}
+
+.btnOrange.btnFloat:before {
+  background: #FFAA40;
+}
+
+.btnPurple.btnFloat:before {
+  background: #8D336A;
+}
+
+
+.btnFloat:before {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btnFloat:hover:before {
+  
+}
+
+.btnFloat:hover:before {
+  margin-top: -2px;
+  margin-left: 0px;
+  transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+/* SLIDE */
+.btnSlide.btnBlueGreen {
+  background: 0;
+}
+
+.btnSlide .top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  background: #00AE68;
+  z-index: 10;
+  transition: all 0.2s ;
+  border-radius: 5px;
+}
+
+.btnSlide.btnBlueGreen .top {
+  background: #00AE68;
+}
+
+.btnSlide.btnLightBlue .top {
+  background: #5DC8CD;
+}
+
+.btnSlide.btnOrange .top {
+  background: #FFAA40;
+}
+
+.btnSlide.btnPurple .top {
+  background: #A74982;
+}
+
+.btnSlide .bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  color: #000;
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.btnSlide:hover .top {
+  top: 40px;
+}
+
+
+.button2 {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  } 
+
+ 
+  </style>
+
+<div id="shadow">
+  <center><strong><h1>Admin</h1></strong></center><br><br>
+  <center>
+<input type="radio" id="slider1" name="Slider" value="slider1">
+<label>Slider Image 1&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="radio" id="slider2" name="Slider" value="slider2">
+<label>Slider Image 2&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="radio" id="slider3" name="Slider" value="slider3">
+<label>Slider Image 3&nbsp;&nbsp;&nbsp;&nbsp;</label><br><br>
+<img id="myimg"><label id="upProgress"></label> <br><br>
+
+<button id="select" class="button2">Select Image</button>
+<button id="upload" class="button2">Upload Image</button>
+
+
+<br><br><br><input type="radio" id="Post1" name="Post" value="Post1">
+<label>Post 1&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="radio" id="Post2" name="Post" value="Post2">
+<label>Post 2&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="radio" id="Post3" name="Post" value="Post3">
+<label>Post 3&nbsp;&nbsp;&nbsp;&nbsp;</label><br><br>
+<img id="myimg_post"><label id="upProgress_post"></label> <br><br>
+
+<button id="select_post" class="button2">Select Image</button>
+<button id="upload_post" class="button2">Upload Image</button>
+</center>
+
+
+<br><br>Address : <input id="Address" type="text"><br>
+<br>Phone No : <input id="PhoneNo" type="text"><br>
+<br>Service Name : <input id="ServiceName" type="text"><br>
+<br>Information : <input id="Information" type="text"><br>
+<br>Google Map Link : <input id="GoogleMapLink" type="text"><br>
+<br>Youtube Embedded Link : <input id="YoutubeEmbeddedLink" type="text"><br>
+<br>Feature Name 1 : <input id="Feature1" type="text"><br>
+<br>Feature Name 1 Description : <input id="Feature1Desc" type="text"><br>
+<br>Feature Name 2 : <input id="Feature2" type="text"><br>
+<br>Feature Name 2 Description: <input id="Feature2Desc" type="text"><br>
+<br>Feature Name 3 : <input id="Feature3" type="text"><br>
+<br>Feature Name 3 Description: <input id="Feature3Desc" type="text"><br>
+<br>About Us: <input id="about_us" type="text"><br>
+<br>Follow Us: <input id="follow_us" type="text"><br>
+<br>FB link: <input id="fb" type="text"><br>
+<br>Insta link: <input id="insta" type="text"><br>
+<br>youtube link: <input id="youtube" type="text"><br>
+
+
+
+<button id="save" class="button2">Save</button><br>
+
+
+
+
+
+</div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
+
+<script id="MainScript">
+
+  
+
+var ImagName,ImgUrl;
+var files=[];
+var reader=new FileReader();
+var UserID="Sahil";
+
+// Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ var firebaseConfig = {
+    apiKey: "AIzaSyAtOsCiEFaHy1Ct6UbkfhEQYe3AegyEEk0",
+    authDomain: "weconnect-f3993.firebaseapp.com",
+    projectId: "weconnect-f3993",
+    storageBucket: "weconnect-f3993.appspot.com",
+    messagingSenderId: "1084247610394",
+    appId: "1:1084247610394:web:f762784a5c295fecd2eda3",
+    measurementId: "G-5KV7EPD12V"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //firebase.analytics(); 
+  //firebase.analytics();
+
+  //Selection Process of slider
+  document.getElementById("select_post").onclick = function(e){
+
+    var input=document.createElement('input');
+    input.type='file';
+    input.onchange =e => {
+      files=e.target.files;
+      reader=new FileReader();
+      reader.onload=function(){
+        document.getElementById("myimg_post").src= reader.result;
+      }
+      reader.readAsDataURL(files[0]);
+    }
+    input.click();
+
+  }
+  
+//Selection Process of Post
+document.getElementById("select").onclick = function(e){
+
+var input=document.createElement('input');
+input.type='file';
+input.onchange =e => {
+  files=e.target.files;
+  reader=new FileReader();
+  reader.onload=function(){
+    document.getElementById("myimg").src= reader.result;
+  }
+  reader.readAsDataURL(files[0]);
+}
+input.click();
+
+}
+
+
+
+  //Slider Upload Process
+  document.getElementById('upload').onclick=function(){
+    Slider1=document.getElementById('slider1').value;
+    Slider2=document.getElementById('slider2').value;
+    Slider3=document.getElementById('slider3').value;
+
+    
+    
+    
+         if(document.getElementById('slider1').checked)
+          {
+            var uploadTask = firebase.storage().ref(UserID+'/'+Slider1+".png").put(files[0]);
+          }
+          else if(document.getElementById('slider2').checked){
+            var uploadTask = firebase.storage().ref(UserID+'/'+Slider2+".png").put(files[0]);
+          }else{
+            var uploadTask = firebase.storage().ref(UserID+'/'+Slider3+".png").put(files[0]);
+          }
+
+    uploadTask.on('state_changed',function(snapshot){
+      
+      var progress = (snapshot.bytesTranferred / snapshot.totalBytes)*100;
+      document.getElementById('UpProgress').innerHTML='upload'+progress+'%';
+    },
+    function(error){
+      alert('error in saving the image');
+    },
+    function(){
+      uploadTask.snapshot.ref.getDownloadURL().then(function(url){
+          ImgUrl=url;
+          if(document.getElementById('slider1').checked)
+          {
+            firebase.database().ref(UserID+'/'+Slider1).set({
+            Name: Slider1,
+            Link: ImgUrl
+            });
+          }
+          else if(document.getElementById('slider2').checked){
+            firebase.database().ref(UserID+'/'+Slider2).set({
+            Name: Slider2,
+            Link: ImgUrl
+            });
+          }else{
+            firebase.database().ref(UserID+'/'+Slider3).set({
+            Name: Slider3,
+            Link: ImgUrl
+            });
+          }
+      
+      alert('image added successfully');
+      Slider1=null;
+      Slider2=null;
+      Slider3=null;
+    }
+    );
+  });
+  }
+
+  //Post Upload Process
+  document.getElementById('upload_post').onclick=function(){
+    Post1=document.getElementById('Post1').value;
+    Post2=document.getElementById('Post2').value;
+    Post3=document.getElementById('Post3').value;
+
+    
+    
+    
+         if(document.getElementById('Post1').checked)
+          {
+            var uploadTask = firebase.storage().ref(UserID+'/'+Post1+".png").put(files[0]);
+          }
+          else if(document.getElementById('slider2').checked){
+            var uploadTask = firebase.storage().ref(UserID+'/'+Post2+".png").put(files[0]);
+          }else{
+            var uploadTask = firebase.storage().ref(UserID+'/'+Post3+".png").put(files[0]);
+          }
+
+    uploadTask.on('state_changed',function(snapshot){
+      
+      var progress = (snapshot.bytesTranferred / snapshot.totalBytes)*100;
+      document.getElementById('UpProgress').innerHTML='upload'+progress+'%';
+    },
+    function(error){
+      alert('error in saving the image');
+    },
+    function(){
+      uploadTask.snapshot.ref.getDownloadURL().then(function(url){
+          ImgUrl=url;
+          if(document.getElementById('Post1').checked)
+          {
+            firebase.database().ref(UserID+'/'+Post1).set({
+            Name: Post1,
+            Link: ImgUrl
+            });
+          }
+          else if(document.getElementById('Post2').checked){
+            firebase.database().ref(UserID+'/'+Post2).set({
+            Name: Post2,
+            Link: ImgUrl
+            });
+          }else{
+            firebase.database().ref(UserID+'/'+Post3).set({
+            Name: Post3,
+            Link: ImgUrl
+            });
+          }
+      
+      alert('image added successfully');
+      Post1=null;
+      Post2=null;
+      Post3=null;
+    }
+    );
+  });
+  }
+
+
+
+//Save Information
+  document.getElementById('save').onclick=function(){
+    Address=document.getElementById('Address').value;
+    PhoneNo=document.getElementById('PhoneNo').value;
+    ServiceName=document.getElementById('ServiceName').value;
+    Information=document.getElementById('Information').value;
+    YoutubeEmbeddedLink=document.getElementById('YoutubeEmbeddedLink').value;
+    GoogleMapLink=document.getElementById('GoogleMapLink').value;
+    Feature1=document.getElementById('Feature1').value;
+    Feature1Desc=document.getElementById('Feature1Desc').value;
+    Feature2=document.getElementById('Feature2').value;
+    Feature2Desc=document.getElementById('Feature2Desc').value;
+    Feature3=document.getElementById('Feature3').value;
+    Feature3Desc=document.getElementById('Feature3Desc').value;
+    about_us=document.getElementById('about_us').value;
+    follow_us=document.getElementById('follow_us').value;
+    fb=document.getElementById('fb').value;
+    insta=document.getElementById('insta').value;
+    youtube=document.getElementById('youtube').value;
+    
+    firebase.database().ref(UserID+'/'+'OtherInfo').set({
+            Address: Address,
+            PhoneNo: PhoneNo,
+            ServiceName: ServiceName,
+            Information: Information,
+            YoutubeEmbeddedLink: YoutubeEmbeddedLink,
+            GoogleMapLink: GoogleMapLink,
+            Feature1: Feature1,
+            Feature1Desc: Feature1Desc,
+            Feature2: Feature2,
+            Feature2Desc: Feature2Desc,
+            Feature3: Feature3,
+            Feature3Desc: Feature3Desc,
+            about_us: about_us,
+            follow_us:follow_us,
+            fb: fb,
+            insta:insta,
+            youtube:youtube,
+
+            });
+    
+     
+            alert('Information inserted successfully');
+
+  
+  }
+
+
+
+
+
+
+  
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<p id="demo"></p>
+
+<script>
+if (window.location.href.includes("webdemo", 0)) {
+  document.getElementById("demo").innerHTML = "Web";
+}
+else
+{
+	document.getElementById("demo").innerHTML = "Android";
+}
+</script>-->
+
+</body>
+</html>
